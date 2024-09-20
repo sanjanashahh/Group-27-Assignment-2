@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Define custom CSS variables for colors */
+:root{
+    --acent-color: #146d90;
+    --base-color: white;
+    --text-color: #2E2B41;
+    --input-color: #F3F0FF;
+}
+
+/* Reset default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set base styles for HTML */
+html{
+    font-family: Poppins, Segoe UI, sans-serif;
+    font-size: 12pt;
+    color: var(--input-color);
+}
+
+/* Style the body element */
+body{
+    min-height: 100vh;
+    background-image: url(medical.jpg);
+    background-size: cover;
+    background-position: right;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the main wrapper */
+.wrapper{
+    box-sizing: border-box;
+    width: min(400px, 100%);
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the main heading */
+h1{
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Style the form */
+form{
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style form divs */
+form > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Style form labels */
+form label{
+    flex-shrink: 0;
+    height: 70px;
+    width: 60px;
+    background-color: var(--acent-color);
+    fill: var(--base-color);
+    color: var(--base-color);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Specific height adjustment for Event Description and Location labels */
+.form-group:has(#eventDescription) label, 
+.form-group:has(#eventLocation) label {
+    height: 90px; /* Custom height for Event Description and Location */
+}
+
+/* Style form inputs, selects, and textareas */
+form input, form select, form textarea{
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 70px;
+    padding: 1em;
+    font: inherit;
+    font-size: 0.9rem;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--input-color);
+    border-left: none;
+    background-color: var(--input-color);
+    transition: 150ms ease;
+    outline: none;
+}
+
+
+/* Style the input wrapper */
+form .input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Style the input container */
+form .input-container {
+    flex-grow: 1;
+    position: relative;
+}
+
+/* Style the character limit display */
+form .char-limit {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-left: 10px;
+    align-self: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Style hover states for inputs, selects, and textareas */
+form input:hover, form select:hover, form textarea:hover{
+    border-color: var(--acent-color);
+}
+
+/* Style focus states for inputs, selects, and textareas */
+form input:focus, form select:focus, form textarea:focus{
+    outline: none;
+    border-color: var(--text-color);
+}
+
+/* Style labels when their associated input is focused */
+div:has(input:focus) > label, div:has(select:focus) > label, div:has(textarea:focus) > label{
+    background-color: var(--text-color);
+}
+
+/* Style placeholders */
+form input::placeholder, form select::placeholder, form textarea::placeholder{
+    color: var(--text-color);
+}
+
+/* Style textareas specifically */
+form textarea {
+    height: 90px;
+    resize: none;
+}
+
+/* Style paragraphs */
+p{
+    width: 100%;
+    text-align: right;
+    margin-top: 0px;
+    color: #737373;
+}
+
+/* Style form buttons */
+form button{
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: .85em 4em;
+    background-color: var(--acent-color);
+    color: var(--base-color);
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+
+/* Style button hover state */
+form button:hover {
+    background-color: var(--text-color);
+}
+
+/* Style button focus state */
+form button:focus{
+    outline: none;
+    border-color: var(--text-color);
+}
+
+/* Style links */
+a{
+    text-decoration: none;
+    color: var(--acent-color);
+}
+
+/* Style link hover state */
+a:hover{
+    text-decoration: underline;
+}
+
+/* Remove default appearance for select elements */
+select, .custom-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Style the urgency select dropdown */
+.form-group:has(#urgency) {
+    position: relative;
+}
+
+.form-group:has(#urgency)::after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--text-color);
+}
+
+/* Style the custom multi-select dropdown */
+.custom-select {
+    position: relative;
+    flex-grow: 1;
+}
+
+.select-selected {
+    background-color: var(--input-color);
+    padding: 1em;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    height: 70px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.select-selected:after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.select-selected.select-arrow-active:after {
+    content: "\25B2";
+}
+
+.select-items {
+    position: absolute;
+    background-color: var(--text-color);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 0 0 10px 10px;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div {
+    padding: 10px;
+    cursor: pointer;
+    color: var(--base-color);
+}
+
+.select-items div:hover, .select-items div.selected {
+    background-color: var(--acent-color);
+    color: var(--base-color);
+}
