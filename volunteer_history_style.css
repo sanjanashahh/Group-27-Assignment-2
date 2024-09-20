@@ -1,0 +1,58 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background_pic.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#volunteer-history {
+    max-width: 90%;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#volunteer-history h2 {
+    font-family: 'Times New Roman';
+    font-weight: 200;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead th {
+    background-color: #005f87;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 15px;
+}
+
+tbody td {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+}
