@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang = "en" >
+
+<head>
+<meta charset = "UTF-8">
+<meta http-equiv="X-UA-Compatible" content = "IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Edit My Profile</title>
+<link rel="icon" type="image/x-icon" href="C:\Users\Abina\Downloads\VolunteerProfile-removebg-preview.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<h1>VOLUNTEER PROFILE</h1>
+<link rel="stylesheet" href="style0.css">
+</head>
+
+<body>
+    
+    <div class="bg_Form">
+        <form action="/action_page.php">
+            <fieldset>
+                <br><br>
+                <div class="container">
+                    <!--Profile image-->
+                    <label id="image-label" for="image-file">Upload Your Image: </label><br>
+                    <input type="file" id="image-file" name="image-file" accept="image/*"/>
+                </div>         
+                <br> 
+                <div class="container">
+                    <!--full name-->
+                    <label for="Fname">Full name: </label>
+                    <input type="text" id="Fname" name="Fname" placeholder="Enter name " maxlength="50" required><p id="result_fn"></p><br> 
+                </div>
+                <div class="container">
+                    <!--full address 1 required-->
+                    <label for="Vaddress1">Address 1: </label>
+                    <input type="text" id="Vaddress1" name="Vaddress1" placeholder="Enter address " maxlength="100" required><p id="result_ad1"></p><br> 
+                </div>
+                <div class="container">
+                    <!--full address 2 optional-->
+                    <label for="Vaddress2">Address 2: </label>
+                    <input type="text" id="Vaddress2" name="Vaddress2" maxlength="100"><p id="result_ad2"></p><br> 
+                </div>
+                <div class="container">
+                    <!--city required-->
+                    <label for="Vcity">City: </label>
+                    <input type="text" id="Vcity" name="Vcity" placeholder="Enter city " maxlength="100" required><p id="result_city"></p><br> 
+                </div>
+                <br> 
+                <div class="container">
+                    <!--2char dropdown dor state-->
+                    <label for="Vstate">State: </label>
+                    <select name="Vstate" size="1">
+                        <option value="AK">AK</option>
+                        <option value="AL">AL</option>
+                        <option value="AR">AR</option>
+                        <option value="AZ">AZ</option>
+                        <option value="CA">CA</option>
+                        <option value="CO">CO</option>
+                        <option value="CT">CT</option>
+                        <option value="DC">DC</option>
+                        <option value="DE">DE</option>
+                        <option value="FL">FL</option>
+                        <option value="GA">GA</option>
+                        <option value="HI">HI</option>
+                        <option value="IA">IA</option>
+                        <option value="ID">ID</option>
+                        <option value="IL">IL</option>
+                        <option value="IN">IN</option>
+                        <option value="KS">KS</option>
+                        <option value="KY">KY</option>
+                        <option value="LA">LA</option>
+                        <option value="MA">MA</option>
+                        <option value="MD">MD</option>
+                        <option value="ME">ME</option>
+                        <option value="MI">MI</option>
+                        <option value="MN">MN</option>
+                        <option value="MO">MO</option>
+                        <option value="MS">MS</option>
+                        <option value="MT">MT</option>
+                        <option value="NC">NC</option>
+                        <option value="ND">ND</option>
+                        <option value="NE">NE</option>
+                        <option value="NH">NH</option>
+                        <option value="NJ">NJ</option>
+                        <option value="NM">NM</option>
+                        <option value="NV">NV</option>
+                        <option value="NY">NY</option>
+                        <option value="OH">OH</option>
+                        <option value="OK">OK</option>
+                        <option value="OR">OR</option>
+                        <option value="PA">PA</option>
+                        <option value="RI">RI</option>
+                        <option value="SC">SC</option>
+                        <option value="SD">SD</option>
+                        <option value="TN">TN</option>
+                        <option value="TX">TX</option>
+                        <option value="UT">UT</option>
+                        <option value="VA">VA</option>
+                        <option value="VT">VT</option>
+                        <option value="WA">WA</option>
+                        <option value="WI">WI</option>
+                        <option value="WV">WV</option>
+                        <option value="WY">WY</option>
+                    </select>
+                </div>
+                <br><br>
+
+                <!--MAanually enter Zipcode with limit of 9 and atleast 5-->
+                <div class="container">
+                    <label for="Vzipcode">Zipcode: </label>
+                    <input type="text" id="Vzipcode" name="Vzipcode" placeholder="Enter zipcode" pattern="^[a-zA-Z0-9]{5,9}$" maxlength="9" required>
+                    
+                </div> 
+                <br><br>         
+
+                <div class="container">
+                    <!--Multi select SKILLS-->                    
+                    <label for="Vskills">Skills: </label><br>
+                        <select multiple id="Vskills" name="Vskills" style="width: 900px" size="6">
+                            <option value='AD' selected>Attention to Detail</option>
+                            <option value='CK'>Cardiac Knowledge</option>
+                            <option value='TP'>Technological Proficiency</option>
+                            <option value='CE'>Child Empathy</option>
+                            <option value='CUP'>Calm Under Pressure</option>
+                        </select><br>
+                    <p>Hold down 'CTRL' key on Windows/ 'COMMAND' key on Mac</p><br>
+                </div>
+                <br><br>
+                
+                <div class="container">
+                    <!--Multi select preferences-->                    
+                    <label for="Vpreferences">Preferences: </label>
+                        <select multiple id="Vpreferences" name="Vpreferences" style="width: 800px" size="6">
+                            <option value='Neurology' selected>Neurology</option>
+                            <option value='Cardiology'>Cardiology</option>
+                            <option value='Radiology'>Radiology</option>
+                            <option value='Pediatrics'>Pediatrics</option>
+                            <option value='Emergency Department (ER)'>Emergency Department (ER)</option>
+                        </select><br>
+                    <p>Hold down 'CTRL' key on Windows/ 'COMMAND' key on Mac</p><br>
+                </div>
+                <br><br>
+
+                <div class="container">
+                    <!-- To choose multiple available dates -->
+                    <label for="Dates">Availability: </label>
+                    <div id="date-picker">
+                        <label><input type="checkbox" value="2024-09-20"> September 25, 2024</label><br>
+                        <label><input type="checkbox" value="2024-09-21"> September 28, 2024</label><br>
+                        <label><input type="checkbox" value="2024-09-22"> October 2, 2024</label><br>
+                        <label><input type="checkbox" value="2024-09-23"> October 23, 2024</label><br>
+                        <label><input type="checkbox" value="2024-09-24"> October 28, 2024</label><br>
+                    </div>
+                    <p id="selected-dates"></p>
+                </div>
+                <br><br>
+
+                <div class="container">
+                    <!--short about me: modify textarea and add character limit-->
+                    <label for="Vsummary">A Little About Me: </label><br>
+                    <textarea id="Vsummary" name="Vsummary" rows="8" placeholder="What you are working on currently, interests, and achievements.."></textarea><p id="result_textbox"></p><br>
+                </div>  
+                <br><br>
+                                             
+                <div class="container">
+                    <!--Button to save the inputs-->
+                    <input type="submit" value="Save Changes">
+                </div>
+                
+            </fieldset>
+        </form>
+
+    </div>
+    
+</body>
+
+</html>
