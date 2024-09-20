@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Matching</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Volunteer Matching</h1>
+        <form id="matchingForm">
+            <label for="volunteerName">Volunteer Name:</label>
+            <input type="text" id="volunteerName" name="volunteerName" readonly>
+
+            <label for="matchedEvent">Matched Program:</label>
+            <input type="text" id="matchedEvent" name="matchedEvent" readonly>
+
+            <button type="button" onclick="matchVolunteer()">Match Volunteer</button>
+        </form>
+    </div>
+
+    <script>
+        function matchVolunteer() {
+            // Simulate matching logic
+            document.getElementById('volunteerName').value = "James Smith";
+            document.getElementById('matchedEvent').value = "Cardiology Department";
+        }
+    </script>
+</body>
+</html>
+
+
